@@ -1,41 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Enhanced Landing Page</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to Auto Botz</h1>
-        <p>Streamline Your Automation Needs</p>
-        <a href="#features" class="btn">Discover More</a>
-    </header>
 
-    <section id="features">
-        <h2>Features</h2>
-        <ul>
-            <li>Feature 1: Simplify your tasks</li>
-            <li>Feature 2: Integrate with existing workflows</li>
-            <li>Feature 3: User-friendly interface</li>
-        </ul>
-    </section>
+	<section class="hero" aria-labelledby="hero-heading">
+		<div class="left">
+			<h2 id="hero-heading">Privacy & Data</h2>
+			<p class="muted">This page explains how
+				<?php echo htmlspecialchars(parse_url(base_url(), PHP_URL_HOST) ?: base_url()); ?> collects and uses
+				data.
+			</p>
+			<div class="cta"><a href="<?php echo base_url('home/sign_up'); ?>">Open an account</a></div>
+		</div>
+		<div class="right">
+			<!-- placeholder for quick contact or stats -->
+			<div
+				style="background:linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01));padding:12px;border-radius:8px;text-align:center;min-width:200px">
+				<div style="font-weight:600;font-size:1.3rem;color:var(--theme-color)">AutoBotz</div>
+				<div class="muted" style="font-size:0.9rem;margin-top:6px">Secure & GDPR-friendly</div>
+			</div>
+		</div>
+	</section>
 
-    <section id="testimonials">
-        <h2>What Our Users Say</h2>
-        <blockquote>
-            <p>"This tool has transformed the way I work!" - User A</p>
-        </blockquote>
-        <blockquote>
-            <p>"A must-have for anyone looking to automate processes." - User B</p>
-        </blockquote>
-    </section>
+	<!-- Features / Landing highlights -->
+	<section id="features" style="max-width:var(--container-w);margin:10px auto 0;padding:0 18px">
+		<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+			<div style="background:#fff;padding:18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
+				<h3 style="margin:0 0 8px;color:var(--theme-color)">Chatbot</h3>
+				<p class="muted">24/7 messenger bot with visual flow builder to automate replies and capture leads.</p>
+			</div>
+			<div style="background:#fff;padding:18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
+				<h3 style="margin:0 0 8px;color:var(--theme-color)">Social Posting</h3>
+				<p class="muted">Instant and scheduled posting to connected social pages — image editor included.</p>
+			</div>
+			<div style="background:#fff;padding:18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04)">
+				<h3 style="margin:0 0 8px;color:var(--theme-color)">Comment Automation</h3>
+				<p class="muted">Auto-respond, hide or moderate comments using keyword rules.</p>
+			</div>
+		</div>
+	</section>
 
-    <footer>
-        <h2>Get Started Today!</h2>
-        <p>Join countless others who have improved their efficiency.</p>
-        <a href="#" class="btn">Contact Us</a>
-    </footer>
+	<div class="container">
+		<aside class="sidebar" role="complementary">
+			<h3 class="section-title">Quick links</h3>
+			<a href="<?php echo base_url('home/sign_up'); ?>">7 days free trial</a>
+			<a href="<?php echo base_url('home/privacy_policy'); ?>">Privacy Policy</a>
+			<a href="<?php echo base_url('home/terms_use'); ?>">Terms of Service</a>
+			<a href="<?php echo base_url('home/gdpr'); ?>">GDPR</a>
+
+			<hr style="margin:14px 0;border:none;border-top:1px solid #eee">
+			<h3 class="section-title">Contact</h3>
+			<div class="muted">Email: <a href="mailto:<?php echo $this->config->item('institute_email'); ?>">
+					<?php echo $this->config->item('institute_email'); ?>
+				</a></div>
+			<div class="muted" style="margin-top:8px">Phone: 01156040096</div>
+
+			<div style="margin-top:12px" class="socials">
+				<span>Facebook</span>
+				<span style="margin-left:8px">Twitter</span>
+				<span style="margin-left:8px">LinkedIn</span>
+			</div>
+		</aside>
+
+		<article class="content" role="main" aria-labelledby="policy-title">
+			<h2 id="policy-title">Privacy Policy</h2>
+			<p>Welcome to
+				<?php echo base_url(); ?> (the Site). We understand that privacy online is important to users of our
+				Site, especially when conducting business. This statement governs our privacy policies with respect to
+				those users of the Site (Visitors) who visit without transacting business and Visitors who register to
+				transact business on the Site and make use of the various services offered by This APP (collectively,
+				Services) (Authorized Customers).
+			</p>
+
+			<p><strong>Personally Identifiable Information</strong></p>
+			<p>Refers to any information that identifies or can be used to identify, contact, or locate the person to
+				whom such information pertains, including, but not limited to, name, address, phone number, fax number,
+				email address, financial profiles, social security number, and credit card information. Personally
+				Identifiable Information does not include information that is collected anonymously (that is, without
+				identification of the individual user) or demographic information not connected to an identified
+				individual.</p>
+
+			<p><strong>What Personally Identifiable Information is collected?</strong></p>
+			<p>We may collect basic user profile information from all of our Visitors. We collect the following
+				additional information from our Authorized Customers: the names, addresses, phone numbers and email
+				addresses of Authorized Customers, the nature and size of the business, and the nature and size of the
+				advertising inventory that the Authorized Customer intends to purchase or sell.</p>
+
+			<p><strong>How can Visitors correct inaccuracies?</strong></p>
+			<p>Visitors and Authorized Customers may contact us to update Personally Identifiable Information about them
+				or to correct any inaccuracies by emailing us at <a
+					href="mailto:<?php echo $this->config->item('institute_email'); ?>">
+					<?php echo $this->config->item('institute_email'); ?>
+				</a>.</p>
+
+			<p id="cookie_policy"><strong>Are Cookies Used on the Site?</strong></p>
+			<p>Cookies are used for a variety of reasons. We use Cookies to obtain information about the preferences of
+				our Visitors and the services they select. We also use Cookies for security purposes to protect our
+				Authorized Customers.</p>
+
+			<p><strong>Can a Visitor delete or deactivate Personally Identifiable Information?</strong></p>
+			<p>We provide Visitors and Authorized Customers with a mechanism to delete/deactivate Personally
+				Identifiable Information from the Site’s database by contacting us via the email address above. However,
+				because of backups and records of deletions, it may be impossible to delete a Visitor’s entry without
+				retaining some residual information. An individual who requests to have Personally Identifiable
+				Information deactivated will have this information functionally deleted, and we will not sell, transfer,
+				or use Personally Identifiable Information relating to that individual in any way moving forward.</p>
+
+			<p><strong>Links:</strong></p>
+			<p>
+				<?php echo base_url(); ?> contains links to other web sites. Please note that when you click on one of
+				these links, you are moving to another web site. We encourage you to read the privacy statements of
+				these linked sites as their privacy policies may differ from ours.
+			</p>
+
+			<!-- keep existing long legal text... (truncated for clarity) -->
+
+		</article>
+	</div>
+
+	<footer class="site-footer" role="contentinfo">
+		<div class="footer-inner">
+			<div class="footer-col">
+				<h4>AutoBotz</h4>
+				<p class="muted">Revolutionary marketing software built using official APIs.</p>
+				<p class="muted">© <span id="year"></span> AutoBotz</p>
+			</div>
+			<div class="footer-col">
+				<h4>Quick links</h4>
+				<a href="<?php echo base_url('home/privacy_policy'); ?>">Privacy Policy</a>
+				<a href="<?php echo base_url('home/terms_use'); ?>">Terms of Service</a>
+				<a href="<?php echo base_url('home/gdpr'); ?>">GDPR</a>
+			</div>
+			<div class="footer-col">
+				<h4>Contact</h4>
+				<a href="mailto:<?php echo $this->config->item('institute_email'); ?>">
+					<?php echo $this->config->item('institute_email'); ?>
+				</a>
+				<div class="socials">
+					<span>Facebook</span>
+					<span style="margin-left:8px">Twitter</span>
+					<span style="margin-left:8px">YouTube</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		(function () {
+			try { document.getElementById('year').textContent = new Date().getFullYear(); } catch (e) { }
+		})();
+	</script>
 </body>
+
 </html>
