@@ -1,369 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Privacy Policy for the site">
-	<title>Privacy Policy - AutoBotz</title>
-	<style>
-		/* Theme vars (can be overridden by inline body style) */
-		:root {
-			--theme-color: #007bff;
-			--muted: #6c757d;
-			--bg: #f8f9fb;
-			--container-w: 1100px;
-		}
-
-		html,
-		body {
-			height: 100%;
-		}
-
-		body {
-			margin: 0;
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-			background: var(--bg);
-			color: #222;
-			line-height: 1.6;
-		}
-
-		/* Layout */
-		.site-header {
-			background: linear-gradient(90deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01));
-			border-bottom: 1px solid #eee
-		}
-
-		.topbar {
-			max-width: var(--container-w);
-			margin: 0 auto;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 12px 18px
-		}
-
-		.brand {
-			display: flex;
-			align-items: center;
-			gap: 12px
-		}
-
-		.brand .logo {
-			width: 42px;
-			height: 42px;
-			border-radius: 8px;
-			background: var(--theme-color);
-			display: inline-block
-		}
-
-		.brand h1 {
-			margin: 0;
-			font-size: 1.15rem;
-			color: var(--theme-color)
-		}
-
-		nav.main-nav a {
-			margin-left: 14px;
-			color: var(--muted);
-			text-decoration: none
-		}
-
-		nav.main-nav a.primary {
-			background: var(--theme-color);
-			color: #fff;
-			padding: 8px 12px;
-			border-radius: 6px;
-			text-decoration: none
-		}
-
-		/* Hero */
-		.hero {
-			max-width: var(--container-w);
-			margin: 22px auto 10px;
-			padding: 28px 18px;
-			background: #fff;
-			border-radius: 10px;
-			box-shadow: 0 6px 18px rgba(22, 27, 34, 0.04);
-			display: flex;
-			gap: 20px;
-			align-items: center
-		}
-
-		.hero .left {
-			flex: 1
-		}
-
-		.hero h2 {
-			margin: 0 0 8px 0;
-			font-size: 1.5rem
-		}
-
-		.hero p {
-			margin: 0;
-			color: var(--muted)
-		}
-
-		.hero .cta {
-			margin-top: 14px
-		}
-
-		.cta a {
-			display: inline-block;
-			background: var(--theme-color);
-			color: #fff;
-			padding: 10px 14px;
-			border-radius: 8px;
-			text-decoration: none
-		}
-
-		/* Main content */
-		.container {
-			max-width: var(--container-w);
-			margin: 20px auto;
-			display: grid;
-			grid-template-columns: 320px 1fr;
-			gap: 20px;
-			padding: 0 18px
-		}
-
-		.sidebar {
-			background: #fff;
-			padding: 18px;
-			border-radius: 8px;
-			box-shadow: 0 2px 6px rgba(5, 10, 20, 0.04)
-		}
-
-		.content {
-			background: #fff;
-			padding: 20px;
-			border-radius: 8px;
-			box-shadow: 0 2px 6px rgba(5, 10, 20, 0.04)
-		}
-
-		.section-title {
-			font-size: 1.05rem;
-			margin: 0 0 10px 0;
-			color: var(--theme-color)
-		}
-
-		.muted {
-			color: var(--muted)
-		}
-
-		/* Footer */
-		.site-footer {
-			background: #111827;
-			color: #fff;
-			padding: 22px 0;
-			margin-top: 26px
-		}
-
-		.footer-inner {
-			max-width: var(--container-w);
-			margin: 0 auto;
-			display: flex;
-			justify-content: space-between;
-			gap: 20px;
-			padding: 0 18px
-		}
-
-		.footer-col {
-			flex: 1
-		}
-
-		.footer-col h4 {
-			margin-top: 0
-		}
-
-		.footer-col a {
-			color: #e6eefc;
-			text-decoration: none;
-			display: block;
-			margin: 6px 0
-		}
-
-		.socials a {
-			margin-right: 8px;
-			color: #e6eefc;
-			text-decoration: none
-		}
-
-		/* small screens */
-		@media (max-width:900px) {
-			.container {
-				grid-template-columns: 1fr;
-			}
-
-			.hero {
-				flex-direction: column;
-				align-items: flex-start
-			}
-
-			nav.main-nav a {
-				margin-left: 8px
-			}
-		}
-
-		/* RTL support helper */
-		body.rtl {
-			direction: rtl
-		}
-
-		body.rtl nav.main-nav a {
-			margin-left: 0;
-			margin-right: 14px
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+    <header>
+        <h1>Welcome to Auto Botz</h1>
+        <p>Streamline Your Automation Needs</p>
+        <a href="#features" class="btn">Discover More</a>
+    </header>
 
-<body class="<?php echo (isset($RTL) && $RTL) ? 'rtl' : ''; ?>"
-	style="--theme-color: <?php echo isset($THEMECOLORCODE) && !empty($THEMECOLORCODE) ? $THEMECOLORCODE : '#007bff'; ?>;">
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Feature 1: Simplify your tasks</li>
+            <li>Feature 2: Integrate with existing workflows</li>
+            <li>Feature 3: User-friendly interface</li>
+        </ul>
+    </section>
 
-	<header class="site-header" role="banner">
-		<div class="topbar">
-			<div class="brand">
-				<span class="logo" aria-hidden="true"></span>
-				<h1>AutoBotz</h1>
-			</div>
-			<nav class="main-nav" aria-label="Main navigation">
-				<a href="<?php echo base_url('pricing'); ?>">Pricing</a>
-				<a href="<?php echo base_url('home/privacy_policy'); ?>">Privacy Policy</a>
-				<a href="<?php echo base_url('home/terms_use'); ?>">Terms</a>
-				<a class="primary" href="<?php echo base_url('home/sign_up'); ?>">Sign up</a>
-			</nav>
-		</div>
-	</header>
+    <section id="testimonials">
+        <h2>What Our Users Say</h2>
+        <blockquote>
+            <p>"This tool has transformed the way I work!" - User A</p>
+        </blockquote>
+        <blockquote>
+            <p>"A must-have for anyone looking to automate processes." - User B</p>
+        </blockquote>
+    </section>
 
-	<section class="hero" aria-labelledby="hero-heading">
-		<div class="left">
-			<h2 id="hero-heading">Privacy & Data</h2>
-			<p class="muted">This page explains how
-				<?php echo htmlspecialchars(parse_url(base_url(), PHP_URL_HOST) ?: base_url()); ?> collects and uses
-				data.
-			</p>
-			<div class="cta"><a href="<?php echo base_url('home/sign_up'); ?>">Open an account</a></div>
-		</div>
-		<div class="right">
-			<!-- placeholder for quick contact or stats -->
-			<div
-				style="background:linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01));padding:12px;border-radius:8px;text-align:center;min-width:200px">
-				<div style="font-weight:600;font-size:1.3rem;color:var(--theme-color)">AutoBotz</div>
-				<div class="muted" style="font-size:0.9rem;margin-top:6px">Secure & GDPR-friendly</div>
-			</div>
-		</div>
-	</section>
-
-	<div class="container">
-		<aside class="sidebar" role="complementary">
-			<h3 class="section-title">Quick links</h3>
-			<a href="<?php echo base_url('home/sign_up'); ?>">7 days free trial</a>
-			<a href="<?php echo base_url('home/privacy_policy'); ?>">Privacy Policy</a>
-			<a href="<?php echo base_url('home/terms_use'); ?>">Terms of Service</a>
-			<a href="<?php echo base_url('home/gdpr'); ?>">GDPR</a>
-
-			<hr style="margin:14px 0;border:none;border-top:1px solid #eee">
-			<h3 class="section-title">Contact</h3>
-			<div class="muted">Email: <a href="mailto:<?php echo $this->config->item('institute_email'); ?>">
-					<?php echo $this->config->item('institute_email'); ?>
-				</a></div>
-			<div class="muted" style="margin-top:8px">Phone: 01156040096</div>
-
-			<div style="margin-top:12px" class="socials">
-				<a href="https://www.facebook.com/">Facebook</a>
-				<a href="https://twitter.com/">Twitter</a>
-				<a href="https://www.linkedin.com/">LinkedIn</a>
-			</div>
-		</aside>
-
-		<article class="content" role="main" aria-labelledby="policy-title">
-			<h2 id="policy-title">Privacy Policy</h2>
-			<p>Welcome to
-				<?php echo base_url(); ?> (the Site). We understand that privacy online is important to users of our
-				Site, especially when conducting business. This statement governs our privacy policies with respect to
-				those users of the Site (Visitors) who visit without transacting business and Visitors who register to
-				transact business on the Site and make use of the various services offered by This APP (collectively,
-				Services) (Authorized Customers).
-			</p>
-
-			<p><strong>Personally Identifiable Information</strong></p>
-			<p>Refers to any information that identifies or can be used to identify, contact, or locate the person to
-				whom such information pertains, including, but not limited to, name, address, phone number, fax number,
-				email address, financial profiles, social security number, and credit card information. Personally
-				Identifiable Information does not include information that is collected anonymously (that is, without
-				identification of the individual user) or demographic information not connected to an identified
-				individual.</p>
-
-			<p><strong>What Personally Identifiable Information is collected?</strong></p>
-			<p>We may collect basic user profile information from all of our Visitors. We collect the following
-				additional information from our Authorized Customers: the names, addresses, phone numbers and email
-				addresses of Authorized Customers, the nature and size of the business, and the nature and size of the
-				advertising inventory that the Authorized Customer intends to purchase or sell.</p>
-
-			<p><strong>How can Visitors correct inaccuracies?</strong></p>
-			<p>Visitors and Authorized Customers may contact us to update Personally Identifiable Information about them
-				or to correct any inaccuracies by emailing us at <a
-					href="mailto:<?php echo $this->config->item('institute_email'); ?>">
-					<?php echo $this->config->item('institute_email'); ?>
-				</a>.</p>
-
-			<p id="cookie_policy"><strong>Are Cookies Used on the Site?</strong></p>
-			<p>Cookies are used for a variety of reasons. We use Cookies to obtain information about the preferences of
-				our Visitors and the services they select. We also use Cookies for security purposes to protect our
-				Authorized Customers.</p>
-
-			<p><strong>Can a Visitor delete or deactivate Personally Identifiable Information?</strong></p>
-			<p>We provide Visitors and Authorized Customers with a mechanism to delete/deactivate Personally
-				Identifiable Information from the Site’s database by contacting us via the email address above. However,
-				because of backups and records of deletions, it may be impossible to delete a Visitor’s entry without
-				retaining some residual information. An individual who requests to have Personally Identifiable
-				Information deactivated will have this information functionally deleted, and we will not sell, transfer,
-				or use Personally Identifiable Information relating to that individual in any way moving forward.</p>
-
-			<p><strong>Links:</strong></p>
-			<p>
-				<?php echo base_url(); ?> contains links to other web sites. Please note that when you click on one of
-				these links, you are moving to another web site. We encourage you to read the privacy statements of
-				these linked sites as their privacy policies may differ from ours.
-			</p>
-
-			<!-- keep existing long legal text... (truncated for clarity) -->
-
-		</article>
-	</div>
-
-	<footer class="site-footer" role="contentinfo">
-		<div class="footer-inner">
-			<div class="footer-col">
-				<h4>AutoBotz</h4>
-				<p class="muted">Revolutionary marketing software built using official APIs.</p>
-				<p class="muted">© <span id="year"></span> AutoBotz</p>
-			</div>
-			<div class="footer-col">
-				<h4>Quick links</h4>
-				<a href="<?php echo base_url('home/privacy_policy'); ?>">Privacy Policy</a>
-				<a href="<?php echo base_url('home/terms_use'); ?>">Terms of Service</a>
-				<a href="<?php echo base_url('home/gdpr'); ?>">GDPR</a>
-			</div>
-			<div class="footer-col">
-				<h4>Contact</h4>
-				<a href="mailto:<?php echo $this->config->item('institute_email'); ?>">
-					<?php echo $this->config->item('institute_email'); ?>
-				</a>
-				<div class="socials">
-					<a href="https://www.facebook.com/">Facebook</a>
-					<a href="https://twitter.com/">Twitter</a>
-					<a href="https://www.youtube.com/">YouTube</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<script>
-		(function () {
-			try { document.getElementById('year').textContent = new Date().getFullYear(); } catch (e) { }
-		})();
-	</script>
+    <footer>
+        <h2>Get Started Today!</h2>
+        <p>Join countless others who have improved their efficiency.</p>
+        <a href="#" class="btn">Contact Us</a>
+    </footer>
 </body>
-
 </html>
